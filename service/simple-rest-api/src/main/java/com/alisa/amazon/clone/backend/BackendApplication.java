@@ -1,4 +1,4 @@
-package com.alisa.amazon.clone.backend.poc;
+package com.alisa.amazon.clone.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

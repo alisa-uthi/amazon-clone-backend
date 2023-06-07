@@ -12,14 +12,27 @@
     <groupId>com.alisa.amazon.clone.backend</groupId>
     <artifactId>service</artifactId>
     <packaging>pom</packaging>
+
     <modules>
-        <module>poc</module>
+        <module>simple-rest-api</module>
     </modules>
 
-    <properties>
-        <maven.compiler.source>20</maven.compiler.source>
-        <maven.compiler.target>20</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>3.3.2</version>
+                <configuration>
+                    <from>
+                        <image>openjdk:17.0-jdk</image>
+                    </from>
+                    <to>
+                        <image>docker.io/alisauthi/${project.name}:${project.version}</image>
+                    </to>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
