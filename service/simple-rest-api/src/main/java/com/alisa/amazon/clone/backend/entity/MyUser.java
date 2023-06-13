@@ -1,20 +1,26 @@
 package com.alisa.amazon.clone.backend.entity;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.NoArgsConstructor;
 
+import static io.swagger.v3.oas.annotations.media.Schema.RequiredMode.REQUIRED;
+
 @Entity
 @NoArgsConstructor
+@Schema(name="My User", description = "My user description")
 public class MyUser {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
 
+    @Schema(name = "name", description = "name of user", requiredMode = REQUIRED, example = "John Doe")
     private String name;
 
+    @Schema(name = "email", description = "email of user", requiredMode = REQUIRED, example = "test@example.com")
     private String email;
 
     public MyUser(String name, String email) {
