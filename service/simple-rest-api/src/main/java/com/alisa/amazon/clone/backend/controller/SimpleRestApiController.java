@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Iterator;
 
 @RestController
-@RequestMapping("v1")
+@RequestMapping("/v1")
 @Slf4j
 public class SimpleRestApiController {
 
@@ -50,7 +50,7 @@ public class SimpleRestApiController {
             @ApiResponse(responseCode = "403", description = "Forbidden"),
             @ApiResponse(responseCode = "404", description = "Not found")})
     public Iterator<MyUser> getAllUsers() {
-        log.info("Get All Users...");
+        log.info("Get All Users {}", myUserRepository.findAll().iterator());
         return myUserRepository.findAll().iterator();
     }
 

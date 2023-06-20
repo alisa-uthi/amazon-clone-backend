@@ -10,4 +10,11 @@
     </parent>
 
     <artifactId>simple-rest-api</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.alisa.amazon.clone.backend</groupId>
+            <artifactId>core-mvc</artifactId>
+        </dependency>
+    </dependencies>
 </project>

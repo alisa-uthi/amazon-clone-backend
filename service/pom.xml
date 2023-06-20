@@ -21,7 +21,6 @@
         <dependency>
             <groupId>com.alisa.amazon.clone.backend</groupId>
             <artifactId>core-mvc</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
