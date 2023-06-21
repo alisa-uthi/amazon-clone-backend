@@ -15,6 +15,7 @@
 
     <modules>
         <module>simple-rest-api</module>
+        <module>master-data-management</module>
     </modules>
 
     <dependencies>
